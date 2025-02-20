@@ -25,13 +25,62 @@ The lab environment has its dedicated network setup to isolate the VMs from the 
 1. Download the REMnux OVA file from [REMnux Downloads][https://remnux.org/].
 2. Import the OVA file into VirtualBox.
 3. Configure the VM settings according to your needs.
-### Step 4: Network Configuration
-1. Set both VMs to use a Host-Only Adapter.
-2. Create an internal network within VirtualBox to ensure that the VMs can communicate with each other but remain isolated from the host network.
+
+# Step 4: Virtual Machine Network Setup Guide
+Set up a network different from the host network:
+## 1. Open VirtualBox and Select Tools
+- Launch VirtualBox.
+- Navigate to the `Tools` section.
+## 2. Create a New Network
+- Click on the three vertical bars and select `Network` from the drop-down menu.
+- Click on the `Create` icon.
+- Confirm by clicking `Yes` to allow VM make changes.
+## 3. Configure the New Network
+- Left-click the newly created network and select `Properties`.
+- Type an IP address. For example, use `10.0.0.1` (easy to recognize).
+- Leave the default subnet mask as it is.
+## 4. Configure DHCP Server
+- Next, click `DHCP Server` and enable the server option.
+- Change the following settings:
+- **Server Address**: `10.0.0.2`
+- **Lower Address Bound**: `10.0.0.3`
+- **Upper Address Bound**: `10.0.0.254`
+- **Click** `Apply`.  
+## Step 5: Setting Up Connectivity Between REMnux and FlareVM
+To ensure successful connectivity between our REMnux box and FlareVM box, follow these steps:
+1. **Configure Network Settings in VirtualBox**:
+- Open VirtualBox and go to your FlareVM machine.
+- Click on `Machine` and select `Settings`.
+- Navigate to the `Network` tab.
+- Attach to `NAT` and then select `Host-Only Adapter`.
+- Choose the VirtualBox host-only adapter from the list.
+- Click `OK`.
+- You should see that the internet connection is disabled on the bottom right, which is a good sign.
+2. **Repeat for REMnux**:
+- Go to your REMnux machine.
+- Click on `Machine` and select `Settings`.
+- Navigate to the `Network` tab.
+- Attach to `Host-Only Adapter`.
+- Click `OK`.
+3. **Configure Network Adapter in FlareVM**:
+- Go to the search bar in FlareVM and type in `Ethernet settings`.
+- Click on `Change adapter options`.
+- Find the Ethernet connection, right-click and select `Properties`.
+- Select `Internet Protocol Version 4 (TCP/IPv4)` and click on `Properties`.
+- Set the DNS server to the REMnux IP address, e.g., `10.0.0.4`.
+- Click `OK`.
+4. **Confirm Connectivity**:
+- Open PowerShell in FlareVM.
+- Confirm the IP address by typing `ipconfig`. For example, it might be `10.0.0.3`.
+- Ping the REMnux IP address: `ping 10.0.0.4`. You should receive a reply.
+- Switch to REMnux and ping the FlareVM IP address: `ping 10.0.0.3`. You should also receive a reply.
+By following these steps, you ensure that both virtual machines can communicate with each other while being isolated from the host's primary network.
+
 ## Safety Precautions
 - Always ensure that the VMs are isolated from the host network to prevent any potential spread of malware.
 - Take regular snapshots of your VMs to revert to a clean state if needed.
 - Do not share files between the host and the VMs unless necessary.
+
 ## Conclusion
 With this setup, I can safely analyze malware without the risk of infecting my host device. VirtualBox, Windows 10 with FlareVM, and REMnux provide a robust environment for thorough malware analysis.
 
