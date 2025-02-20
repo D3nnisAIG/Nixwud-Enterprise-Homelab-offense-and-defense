@@ -20,9 +20,9 @@ The lab environment has its dedicated network setup to isolate the VMs from the 
 1. Create a new VM in VirtualBox and select Windows 10 as the operating system.
 2. Configure the VM settings with appropriate resources (RAM, CPU, etc.).
 3. Install Windows 10 on the VM.
-4. After installation, install FlareVM by following the instructions provided [here]([URL]).
+4. After installation, install FlareVM by following the instructions provided [here][https://github.com/mandiant/flare-vm].
 ### Step 3: Setting Up REMnux VM
-1. Download the REMnux OVA file from [REMnux Downloads]([URL]).
+1. Download the REMnux OVA file from [REMnux Downloads][https://remnux.org/].
 2. Import the OVA file into VirtualBox.
 3. Configure the VM settings according to your needs.
 ### Step 4: Network Configuration
@@ -34,6 +34,4 @@ The lab environment has its dedicated network setup to isolate the VMs from the 
 - Do not share files between the host and the VMs unless necessary.
 ## Conclusion
 With this setup, I can safely analyze malware without the risk of infecting my host device. VirtualBox, Windows 10 with FlareVM, and REMnux provide a robust environment for thorough malware analysis.
-Feel free to check out the repository for detailed analysis and findings: [GitHub Repository]([URL])
-
 
