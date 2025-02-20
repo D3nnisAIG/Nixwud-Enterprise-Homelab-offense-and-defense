@@ -26,8 +26,7 @@ The lab environment has its dedicated network setup to isolate the VMs from the 
 2. Import the OVA file into VirtualBox.
 3. Configure the VM settings according to your needs.
 
-# Step 4: Virtual Machine Network Setup Guide
-Set up a network different from the host network:
+### Step 4: Virtual Machine Network Setup Guide
 ## 1. Open VirtualBox and Select Tools
 - Launch VirtualBox.
 - Navigate to the `Tools` section.
