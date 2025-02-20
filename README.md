@@ -14,7 +14,7 @@ I am using VirtualBox to simulate the malware analysis lab. VirtualBox is a powe
 The lab environment has its dedicated network setup to isolate the VMs from the host device. This ensures that any malicious software executed within the lab does not affect the host machine.
 ## Steps for Setting Up the Lab
 ### Step 1: Install VirtualBox
-1. Download and install VirtualBox from [VirtualBox Downloads]([URL]).
+1. Download and install VirtualBox from [VirtualBox Downloads]([URLhttps://www.virtualbox.org/wiki/Downloads]).
 2. Follow the installation instructions for your specific operating system.
 ### Step 2: Setting Up Windows 10 VM
 1. Create a new VM in VirtualBox and select Windows 10 as the operating system.
