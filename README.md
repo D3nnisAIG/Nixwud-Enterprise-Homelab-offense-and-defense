@@ -2,16 +2,19 @@
 
 Malware Analysis Project Setup
 ## Project Overview
-In this project, I aim to perform detailed malware analysis in a controlled and isolated environment. The entire setup is emulated using VirtualBox, featuring Windows 10 and specialized virtual machines (VMs) to ensure the safety of my host device.
+In this project, I aim to perform detailed malware analysis in a controlled and isolated environment. The entire setup is emulated using VirtualBox, featuring Windows 10, Remnux and a specialized virtual machines network to ensure the safety of my host device.
+
+![Image](https://github.com/user-attachments/assets/60ec9f78-d0f7-4f6d-a578-f8020c469f9f)
+
 ## Lab Environment
 ### VirtualBox
-I am using VirtualBox to simulate the malware analysis lab. VirtualBox is a powerful x86 and AMD64/Intel64 virtualization product for enterprise as well as home use. It is freely available as Open Source Software under the terms of the GNU General Public License (GPL) version 2.
+I am using VirtualBox to simulate the malware analysis lab. VirtualBox is a powerful x86 and AMD64/Intel64 virtualization product for enterprise as well as home use. It is freely available as Open-Source Software under the terms of the GNU General Public License (GPL) version 2.
 ### Operating Systems and Tools
 - **Windows 10**: The primary OS for malware analysis.
 - **FlareVM**: A fully customizable Windows-based security distribution for malware analysis, incident response, penetration testing, etc.
 - **REMnux**: A Linux distribution for reverse-engineering and analyzing malicious software, primarily installed for specific analysis tools not available on Windows.
 ### Network Setup
-The lab environment has its dedicated network setup to isolate the VMs from the host device. This ensures that any malicious software executed within the lab does not affect the host machine.
+The lab environment has a dedicated network setup that isolates the VMs from the host device. This ensures that any malicious software executed within the lab does not affect the host machine.
 ## Steps for Setting Up the Lab
 ### Step 1: Install VirtualBox
 1. Download and install VirtualBox from [VirtualBox Downloads. https://www.virtualbox.org/wiki/Downloads].
