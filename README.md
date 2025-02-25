@@ -2,9 +2,11 @@
 
 Malware Analysis Project Setup
 ## Project Overview
-In this project, I aim to perform detailed malware analysis in a controlled and isolated environment. The entire setup is emulated using VirtualBox, featuring Windows 10, Remnux and a specialized virtual machines network to ensure the safety of my host device.
+In this project, I aim to perform detailed malware analysis in a controlled and isolated environment. The entire setup is emulated using VirtualBox, featuring Windows 10(flareVm) setup, Remnux and a specialized virtual machine network to ensure the safety of my host device.
 
-![Image](https://github.com/user-attachments/assets/60ec9f78-d0f7-4f6d-a578-f8020c469f9f)
+
+![Image](https://github.com/user-attachments/assets/ed22d4a8-0ffa-465a-9d08-c95df70bd3ed)
+
 
 ## Lab Environment
 ### VirtualBox
@@ -12,7 +14,7 @@ I am using VirtualBox to simulate the malware analysis lab. VirtualBox is a powe
 ### Operating Systems and Tools
 - **Windows 10**: The primary OS for malware analysis.
 - **FlareVM**: A fully customizable Windows-based security distribution for malware analysis, incident response, penetration testing, etc.
-- **REMnux**: A Linux distribution for reverse-engineering and analyzing malicious software, primarily installed for specific analysis tools not available on Windows.
+- **REMnux**: A Linux distribution for reverse-engineering and analyzing malicious software, primarily installed to monitor network communication when malware is detonated.
 ### Network Setup
 The lab environment has a dedicated network setup that isolates the VMs from the host device. This ensures that any malicious software executed within the lab does not affect the host machine.
 ## Steps for Setting Up the Lab
